@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contract Client Portal - Default Media Gallery</title>
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -12,6 +13,7 @@
     <!-- Custom CSS -->
     <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
     <!-- Header Bar -->
     <header class="header-bar">
@@ -49,39 +51,39 @@
                     <i class="bi bi-file-earmark-text fs-1 text-white"></i>
                     <span class="sidebar-header-text">Client Portal</span>
                 </div>
-                
+
                 <!-- Navigation Menu -->
                 <div class="sidebar-nav">
                     <a href="#" class="nav-item active" data-tab="overview">
                         <i class="bi bi-info-circle nav-icon"></i>
                         <span class="nav-text">Overview</span>
                     </a>
-                    
+
                     <a href="#" class="nav-item" data-tab="gallery">
                         <i class="bi bi-images nav-icon"></i>
                         <span class="nav-text">Image Gallery</span>
                     </a>
-                    
-<a href="#" class="nav-item" data-tab="presentations">
-    <i class="bi bi-easel nav-icon"></i>
-    <span class="nav-text">Presentations</span>
-</a>
-                    
+
+                    <a href="#" class="nav-item" data-tab="presentations">
+                        <i class="bi bi-easel nav-icon"></i>
+                        <span class="nav-text">Presentations</span>
+                    </a>
+
                     <a href="#" class="nav-item" data-tab="documents">
                         <i class="bi bi-file-text nav-icon"></i>
                         <span class="nav-text">Documents</span>
                     </a>
-                    
+
                     <a href="#" class="nav-item" data-tab="media">
                         <i class="bi bi-camera-video nav-icon"></i>
                         <span class="nav-text">Media Library</span>
                     </a>
-                    
+
                     <a href="#" class="nav-item" data-tab="dimensions">
                         <i class="bi bi-rulers nav-icon"></i>
                         <span class="nav-text">Dimensions</span>
                     </a>
-                    
+
                     <a href="#" class="nav-item" data-tab="estimates">
                         <i class="bi bi-calculator nav-icon"></i>
                         <span class="nav-text">Estimates</span>
@@ -96,7 +98,8 @@
                     <div class="row align-items-start">
                         <div class="col-md-8">
                             <h2 class="content-title">Default Media Gallery</h2>
-                            <p class="content-description">This is a sample contract for demonstration purposes. The actual contract content would be loaded from the database.</p>
+                            <p class="content-description">This is a sample contract for demonstration purposes. The
+                                actual contract content would be loaded from the database.</p>
                         </div>
                         <div class="col-md-4 text-end">
                             <div class="progress-section">
@@ -237,8 +240,60 @@
                     </div>
                 </div>
             </div>
+            <!-- Image Carousel -->
+            <div id="myCarousel" class="carousel slide mb-6 container md d-none" data-bs-ride="carousel">
+                <div class="carouselCloser">
+                    <i class="bi bi-x-lg " id="closeCarousel"></i>
+                </div>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://picsum.photos/1200/600?random=1" class="d-block w-100 carousel-image" alt="Project Showcase 1">
+                        <div class="container">
+                            <div class="carousel-caption text-start">
+                                <h1>Project Showcase</h1>
+                                <p class="opacity-75">Beautiful architectural design for modern living spaces</p>
+                                <p><a class="btn btn-lg btn-primary" href="#gallery-content">View Gallery</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1200/600?random=2" class="d-block w-100 carousel-image" alt="Interior Design">
+                        <div class="container">
+                            <div class="carousel-caption">
+                                <h1>Interior Excellence</h1>
+                                <p>Premium quality finishes and attention to detail in every project</p>
+                                <p><a class="btn btn-lg btn-primary" href="#gallery-content">Explore Designs</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="https://picsum.photos/1200/600?random=3" class="d-block w-100 carousel-image" alt="Completed Project">
+                        <div class="container">
+                            <div class="carousel-caption text-end">
+                                <h1>Completed Success</h1>
+                                <p>See our latest completed projects and client testimonials</p>
+                                <p><a class="btn btn-lg btn-primary" href="#gallery-content">See Results</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </div>
     </div>
+    <div class="darkshade d-none"></div>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -247,5 +302,5 @@
     <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
-</html>
 
+</html>

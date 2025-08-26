@@ -1,68 +1,68 @@
-$(document).ready(function() {
-    
+$(document).ready(function () {
+
     // Tab Navigation Functionality
-    $('.tab-button').on('click', function(e) {
+    $('.tab-button').on('click', function (e) {
         e.preventDefault();
-        
+
         const targetTab = $(this).data('tab');
-        
+
         // Remove active class from all tab buttons
         $('.tab-button').removeClass('active');
-        
+
         // Add active class to clicked tab button
         $(this).addClass('active');
-        
+
         // Hide all tab content
         $('.tab-content').removeClass('active');
-        
+
         // Show target tab content
         $('#' + targetTab + '-content').addClass('active');
-        
+
         // Update sidebar navigation
         $('.sidebar-nav .nav-item').removeClass('active');
         $(`.sidebar-nav .nav-item[data-tab="${targetTab}"]`).addClass('active');
-        
+
         // Load content for the tab
         loadTabContent(targetTab);
     });
-    
+
     // Sidebar Navigation Functionality
-    $('.sidebar-nav .nav-item').on('click', function(e) {
+    $('.sidebar-nav .nav-item').on('click', function (e) {
         e.preventDefault();
-        
+
         const targetTab = $(this).data('tab');
-        
+
         if (targetTab) {
             // Remove active class from all sidebar items
             $('.sidebar-nav .nav-item').removeClass('active');
-            
+
             // Add active class to clicked item
             $(this).addClass('active');
-            
+
             // Update main tab navigation
             $('.tab-button').removeClass('active');
             $(`.tab-button[data-tab="${targetTab}"]`).addClass('active');
-            
+
             // Hide all tab content
             $('.tab-content').removeClass('active');
-            
+
             // Show target tab content
             $('#' + targetTab + '-content').addClass('active');
-            
+
             // Load content for the tab
             loadTabContent(targetTab);
         }
     });
-    
+
     // Function to load content for each tab
     function loadTabContent(tab) {
         let content = '';
-        
-        switch(tab) {
+
+        switch (tab) {
             case 'overview':
                 // Overview content is already in HTML
                 break;
-                
+
             case 'gallery':
                 content = `
                     <div class="row">
@@ -75,21 +75,21 @@ $(document).ready(function() {
                                 <div class="card-body">
                                     <p class="text-muted mb-4">Gallery content will be displayed here. This section would typically contain project images, progress photos, and media files.</p>
                                     <div class="row">
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3" id="Img1">
                                             <div class="bg-light p-4 text-center rounded">
-                                                <i class="bi bi-image text-muted" style="font-size: 48px;"></i>
+                                                <img src="https://picsum.photos/1200/600?random=1" alt="Sample Image 1" class="img-fluid">
                                                 <p class="mt-2 mb-0 text-muted">Sample Image 1</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3" id="Img2">
                                             <div class="bg-light p-4 text-center rounded">
-                                                <i class="bi bi-image text-muted" style="font-size: 48px;"></i>
+                                                <img src="https://picsum.photos/1200/600?random=2" alt="Sample Image 2" class="img-fluid">
                                                 <p class="mt-2 mb-0 text-muted">Sample Image 2</p>
                                             </div>
                                         </div>
-                                        <div class="col-md-4 mb-3">
+                                        <div class="col-md-4 mb-3" id="Img3">
                                             <div class="bg-light p-4 text-center rounded">
-                                                <i class="bi bi-image text-muted" style="font-size: 48px;"></i>
+                                                <img src="https://picsum.photos/1200/600?random=3" alt="Sample Image 3" class="img-fluid">
                                                 <p class="mt-2 mb-0 text-muted">Sample Image 3</p>
                                             </div>
                                         </div>
@@ -101,7 +101,7 @@ $(document).ready(function() {
                 `;
                 $('#gallery-content').html(content);
                 break;
-                
+
             case 'presentations':
                 content = `
                     <div class="row">
@@ -136,7 +136,7 @@ $(document).ready(function() {
                 `;
                 $('#presentations-content').html(content);
                 break;
-                
+
             case 'documents':
                 content = `
                     <div class="row">
@@ -178,7 +178,7 @@ $(document).ready(function() {
                 `;
                 $('#documents-content').html(content);
                 break;
-                
+
             case 'media':
                 content = `
                     <div class="row">
@@ -213,7 +213,7 @@ $(document).ready(function() {
                 `;
                 $('#media-content').html(content);
                 break;
-                
+
             case 'dimensions':
                 content = `
                     <div class="row">
@@ -262,7 +262,7 @@ $(document).ready(function() {
                 `;
                 $('#dimensions-content').html(content);
                 break;
-                
+
             case 'estimates':
                 content = `
                     <div class="row">
@@ -325,16 +325,16 @@ $(document).ready(function() {
     }
     
     // Copy Link functionality
-    $('.btn-outline-light:contains("Copy Link")').on('click', function(e) {
+    $('.btn-outline-light:contains("Copy Link")').on('click', function (e) {
         e.preventDefault();
-        
+
         // Create a temporary input to copy the URL
         const tempInput = $('<input>');
         $('body').append(tempInput);
         tempInput.val(window.location.href).select();
         document.execCommand('copy');
         tempInput.remove();
-        
+
         // Show feedback
         const originalText = $(this).html();
         $(this).html('<i class="bi bi-check me-1"></i>Copied!');
@@ -342,11 +342,11 @@ $(document).ready(function() {
             $(this).html(originalText);
         }, 2000);
     });
-    
+
     // Share functionality
-    $('.btn-outline-light:contains("Share"), .btn-primary:contains("Share Portal")').on('click', function(e) {
+    $('.btn-outline-light:contains("Share"), .btn-primary:contains("Share Portal")').on('click', function (e) {
         e.preventDefault();
-        
+
         if (navigator.share) {
             navigator.share({
                 title: 'Contract Client Portal - Default Media Gallery',
@@ -360,16 +360,25 @@ $(document).ready(function() {
             tempInput.val(window.location.href).select();
             document.execCommand('copy');
             tempInput.remove();
-            
+
             alert('Link copied to clipboard!');
         }
     });
-    
+
     // Test Tab functionality
-    $('.btn-outline-secondary:contains("Test Tab")').on('click', function(e) {
+    $('.btn-outline-secondary:contains("Test Tab")').on('click', function (e) {
         e.preventDefault();
         alert('Test Tab functionality activated!');
     });
-    
+    // click to open a slider - using event delegation for dynamically created elements
+    $(document).on('click', '#Img1, #Img2, #Img3', function () {
+        $('#myCarousel').removeClass('d-none');
+        $('.darkshade').removeClass('d-none');
+    });
+    // click to close a slider
+    $(document).on('click', '#closeCarousel', function () {
+        $('#myCarousel').addClass('d-none');
+        $('.darkshade').addClass('d-none');
+    });
 });
 

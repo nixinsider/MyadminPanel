@@ -361,6 +361,169 @@ body {
     font-size: 16px;
 }
 
+/* Carousel Styles */
+.carousel {
+    /* margin-top: 30px; */
+    position: absolute;
+    max-width: 80%;
+    z-index: 100;
+    display: block;
+    margin :5% 10% ;
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+.darkshade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(93, 93, 93, 0.5);
+    z-index: 50;
+}
+#closeCarousel{
+    position: relative;
+    top: 0;
+    margin-left: 98%;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    z-index: 100;
+}
+.carousel.fade {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity;
+}
+
+.carousel.fade.active {
+    opacity: 1;
+}
+
+.carousel-item {
+    display: none;
+    transition: transform 0.6s ease-in-out;
+}
+
+.carousel-item.active,
+.carousel-item-next,
+.carousel-item-prev {
+    display: block;
+}
+
+.carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+    opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+}
+
+.carousel-image {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.carousel-caption h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.carousel-caption p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%;
+}
+
+/* Gallery Image Styles */
+.gallery-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+#Img1 :hover {
+    cursor: pointer;
+}
+#Img2 :hover {
+    cursor: pointer;
+}
+#Img3 :hover {
+    cursor: pointer;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+}
+
+.image-thumbnail {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.image-thumbnail .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 8px;
+}
+
+.image-thumbnail:hover .overlay {
+    opacity: 1;
+}
+
+.overlay-btn {
+    color: white;
+    border: 2px solid white;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.overlay-btn:hover {
+    background: white;
+    color: #007bff;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .header-title {
