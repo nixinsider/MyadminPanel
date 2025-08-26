@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Client Portal - Default Media Gallery</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Bar -->
+    <header class="header-bar">
+        <div class="container-fluid px-3">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <div class="d-flex  align-items-center">
+                        <i class="bi bi-grid-3x3-gap-fill header-icon me-2"></i>
+                        <div>
+                            <h1 class="header-title mb-0">Contract Client Portal - Default Media Gallery</h1>
+                            <div class="header-subtitle">Contract: Default Media Gallery | Client: Sample Client</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 text-end">
+                    <span class="status-badge me-3">Active</span>
+                    <button class="btn btn-outline-light btn-sm me-2">
+                        <i class="bi bi-link-45deg me-1"></i>Copy Link
+                    </button>
+                    <button class="btn btn-outline-light btn-sm">
+                        <i class="bi bi-share me-1"></i>Share
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container-fluid p-0">
+        <div class="row g-0">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 sidebar">
+                <!-- Client Portal Header -->
+                <div class="sidebar-header d-flex flex-column align-items-center">
+                    <i class="bi bi-file-earmark-text fs-1 text-white"></i>
+                    <span class="sidebar-header-text">Client Portal</span>
+                </div>
+                
+                <!-- Navigation Menu -->
+                <div class="sidebar-nav">
+                    <a href="#" class="nav-item active" data-tab="overview">
+                        <i class="bi bi-info-circle nav-icon"></i>
+                        <span class="nav-text">Overview</span>
+                    </a>
+                    
+                    <a href="#" class="nav-item" data-tab="gallery">
+                        <i class="bi bi-images nav-icon"></i>
+                        <span class="nav-text">Image Gallery</span>
+                    </a>
+                    
+<a href="#" class="nav-item" data-tab="presentations">
+    <i class="bi bi-easel nav-icon"></i>
+    <span class="nav-text">Presentations</span>
+</a>
+                    
+                    <a href="#" class="nav-item" data-tab="documents">
+                        <i class="bi bi-file-text nav-icon"></i>
+                        <span class="nav-text">Documents</span>
+                    </a>
+                    
+                    <a href="#" class="nav-item" data-tab="media">
+                        <i class="bi bi-camera-video nav-icon"></i>
+                        <span class="nav-text">Media Library</span>
+                    </a>
+                    
+                    <a href="#" class="nav-item" data-tab="dimensions">
+                        <i class="bi bi-rulers nav-icon"></i>
+                        <span class="nav-text">Dimensions</span>
+                    </a>
+                    
+                    <a href="#" class="nav-item" data-tab="estimates">
+                        <i class="bi bi-calculator nav-icon"></i>
+                        <span class="nav-text">Estimates</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="col-md-9 col-lg-10 main-content">
+                <!-- Content Header -->
+                <div class="content-header mt-5 container">
+                    <div class="row align-items-start">
+                        <div class="col-md-8">
+                            <h2 class="content-title">Default Media Gallery</h2>
+                            <p class="content-description">This is a sample contract for demonstration purposes. The actual contract content would be loaded from the database.</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <div class="progress-section">
+                                <div class="progress mb-2">
+                                    <div class="progress-bar" role="progressbar" style="width: 65%"></div>
+                                </div>
+                                <div class="progress-text">65% Complete</div>
+                            </div>
+                            <div class="button-group mt-3">
+                                <button class="btn btn-primary btn-sm me-2">
+                                    <i class="bi bi-share me-1"></i>Share Portal
+                                </button>
+                                <button class="btn btn-outline-secondary btn-sm">
+                                    <i class="bi bi-gear me-1"></i>Test Tab
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab Navigation -->
+                <div class="tab-navigation mt-5 container">
+                    <div class="tab-container">
+                        <button class="tab-button active" data-tab="overview">Overview</button>
+                        <button class="tab-button" data-tab="gallery">Gallery</button>
+                        <button class="tab-button" data-tab="presentations">Presentations</button>
+                        <button class="tab-button" data-tab="documents">Documents</button>
+                        <button class="tab-button" data-tab="media">Media</button>
+                        <button class="tab-button" data-tab="dimensions">Dimensions</button>
+                        <button class="tab-button" data-tab="estimates">Estimates</button>
+                    </div>
+                </div>
+
+                <!-- Tab Content Area -->
+                <div class="tab-content-area container mt-0">
+                    <!-- Overview Content -->
+                    <div class="tab-content active" id="overview-content">
+                        <div class="row">
+                            <!-- Contract Details Card -->
+                            <div class="col-md-6">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <i class="bi bi-info-circle card-icon"></i>
+                                        <h5 class="card-title">Contract Details</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Status:</span>
+                                            <span class="detail-value">Active</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Total Value:</span>
+                                            <span class="detail-value">$15,750.00</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Start Date:</span>
+                                            <span class="detail-value">Aug 25, 2025</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Estimated Completion:</span>
+                                            <span class="detail-value">Sep 24, 2025</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Client Information Card -->
+                            <div class="col-md-6">
+                                <div class="content-card">
+                                    <div class="card-header">
+                                        <i class="bi bi-person card-icon"></i>
+                                        <h5 class="card-title">Client Information</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="detail-item">
+                                            <span class="detail-label">Name:</span>
+                                            <span class="detail-value">Sample Client</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Email:</span>
+                                            <span class="detail-value">client@example.com</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Phone:</span>
+                                            <span class="detail-value">+1 (555) 987-6543</span>
+                                        </div>
+                                        <div class="detail-item">
+                                            <span class="detail-label">Company:</span>
+                                            <span class="detail-value">Sample Company</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Other Tab Contents (Hidden by default) -->
+                    <div class="tab-content" id="gallery-content">
+                        <div class="content-placeholder">
+                            <h3>Image Gallery</h3>
+                            <p>Gallery content will be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="presentations-content">
+                        <div class="content-placeholder">
+                            <h3>Presentations</h3>
+                            <p>Presentation content will be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="documents-content">
+                        <div class="content-placeholder">
+                            <h3>Documents</h3>
+                            <p>Document content will be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="media-content">
+                        <div class="content-placeholder">
+                            <h3>Media</h3>
+                            <p>Media content will be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="dimensions-content">
+                        <div class="content-placeholder">
+                            <h3>Dimensions</h3>
+                            <p>Dimension content will be displayed here.</p>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="estimates-content">
+                        <div class="content-placeholder">
+                            <h3>Estimates</h3>
+                            <p>Estimate content will be displayed here.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
+
